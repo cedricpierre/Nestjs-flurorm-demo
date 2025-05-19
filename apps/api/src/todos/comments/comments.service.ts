@@ -28,11 +28,21 @@ export class CommentsService {
         id: 1,
         todoId,
         content: 'Comment 1',
+        authorId: 1,
+        author: {
+          id: 1,
+          name: 'John Doe',
+        },
       },
       {
         id: 2,
         todoId,
         content: 'Comment 2',
+        authorId: 2,
+        author: {
+          id: 2,
+          name: 'Jane Doe',
+        },
       },
     ];
   }
