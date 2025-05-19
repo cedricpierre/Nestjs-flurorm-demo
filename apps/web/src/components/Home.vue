@@ -4,18 +4,18 @@ import { Todo } from '../models/Todo'
 
 const todos = ref([])
 
-const selectedTodo = ref(null)
-
 onMounted(async () => {
   await fetchTodos()
 })
 
-const editTodo = (todo: Todo) => {
-  todo.save()
+const updateTodo = (todo: Todo) => {
+  todo.update()
 }
 
 const deleteTodo = (todo: Todo) => {
+  todos.value = todos.value.filter((t: Todo) => t.id !== todo.id)
   todo.delete()
+
 }
 
 const createTodo = async () => {
@@ -48,9 +48,9 @@ const fetchTodos = async () => {
           Completed
         </label>
       </div>
-      <div class="flex flex-row gap-2 justify-end border-t border-gray-200 pt-4 mt-4">
-        <button class="bg-blue-500 text-white p-2 rounded-md" @click="editTodo(todo)">Edit</button>
+      <div class="flex flex-row gap-2 justify-between border-t border-gray-200 pt-4 mt-4">
         <button class="bg-red-500 text-white p-2 rounded-md" @click="deleteTodo(todo)">Delete</button>
+        <button class="bg-green-500 text-white p-2 rounded-md" @click="updateTodo(todo)">Save</button>
       </div>
     </div>
   </div>
