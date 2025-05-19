@@ -9,15 +9,13 @@ onMounted(async () => {
   await fetchTodos()
 })
 
-const updateTodo = (todo: Todo) => {
-  todo.save()
-
-  Todo.update(todo.id!, {})
+const updateTodo = async (todo: Todo) => {
+  await todo.save()
 }
 
-const deleteTodo = (todo: Todo) => {
+const deleteTodo = async (todo: Todo) => {
   todos.value = todos.value.filter((t: Todo) => t.id !== todo.id)
-  todo.delete()
+  await todo.delete()
 
 }
 
