@@ -1,6 +1,8 @@
 # NestJS Flurorm Demo
 
-This is a monorepo workspace managed by pnpm.
+This is a monorepo workspace managed by pnpm. 
+
+The goal is to demo how you can use Fluorm with NestJS and reause entities from NestJS
 
 ## Prerequisites
 
@@ -12,7 +14,6 @@ This is a monorepo workspace managed by pnpm.
 ```
 .
 ├── apps/          # Application packages
-├── packages/      # Shared packages
 └── pnpm-workspace.yaml
 ```
 
