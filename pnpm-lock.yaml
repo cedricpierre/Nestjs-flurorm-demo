@@ -112,8 +112,8 @@ importers:
         specifier: ^4.1.7
         version: 4.1.7(vite@6.3.5(@types/node@18.19.101)(jiti@2.4.2)(lightningcss@1.30.1)(terser@5.39.2))
       fluorm:
-        specifier: ^0.6.1
-        version: 0.6.1
+        specifier: ^0.7.0
+        version: 0.7.0
       pinia:
         specifier: ^2.3.1
         version: 2.3.1(typescript@5.1.6)(vue@3.5.14(typescript@5.1.6))
@@ -2297,8 +2297,8 @@ packages:
   flatted@3.3.3:
     resolution: {integrity: sha512-GX+ysw4PBCz0PzosHDepZGANEuFCMLrnRTiEy9McGjmkCQYwRq4A/X786G/fjM/+OjsWSU1ZrY5qyARZmO/uwg==}
 
-  fluorm@0.6.1:
-    resolution: {integrity: sha512-YpSskh4F0C6GfSxN0jZsNZPGpV+T1lkVksi5bmQa45TXeWdpGB2hqOZ5dm8IGTqjqfIYw0eaAX1LRTgjETrPXA==}
+  fluorm@0.7.0:
+    resolution: {integrity: sha512-Hb/8SloSpgo1Am8ovJ8qena5J35cHs5ntjqjIKiFpZb7Bpc4z46yZglGryIxUgBUaIu1zDe1M6v2EI3lmOgsDA==}
 
   for-each@0.3.5:
     resolution: {integrity: sha512-dKx12eRCVIzqCxFGplyFKJMPvLEWgmNtUrpTiJIR5u97zEhRG8ySrtboPHZXx7daLxQVrl643cTzbab2tkQjxg==}
@@ -6929,7 +6929,7 @@ snapshots:
 
   flatted@3.3.3: {}
 
-  fluorm@0.6.1: {}
+  fluorm@0.7.0: {}
 
   for-each@0.3.5:
     dependencies:

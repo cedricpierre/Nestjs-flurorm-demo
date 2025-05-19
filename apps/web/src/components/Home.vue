@@ -1,7 +1,8 @@
 <script setup lang="ts">
 import { ref, onMounted, toRaw } from 'vue'
 import { Todo } from '../models/Todo'
-
+import { CreateTodoDto } from '@api/todos/dto/create-todo.dto'
+import type { Model } from 'fluorm';
 const todos = ref([])
 
 onMounted(async () => {
@@ -9,7 +10,9 @@ onMounted(async () => {
 })
 
 const updateTodo = (todo: Todo) => {
-  todo.update()
+  todo.save()
+
+  Todo.update(todo.id!, {})
 }
 
 const deleteTodo = (todo: Todo) => {
@@ -41,8 +44,13 @@ const fetchTodos = async () => {
   <div class="grid grid-cols-1 lg:grid-cols-4 gap-4 mt-4"> 
     <div class="flex flex-col justify-between bg-white border border-gray-300 shadow-md p-4 rounded aspect-4/3" v-for="todo in todos" :key="todo.id">
       <div class="flex flex-col gap-2 justify-start flex-1">
-        <input class="text-2xl font-bold focus:p-2" type="text" v-model="todo.title" />
-        <textarea class="flex-1 focus:p-2" v-model="todo.description" />
+        <div class="flex flex-row gap-2">
+          <span class="text-2xl font-bold">
+            {{ todo.id }}
+          </span>
+          <input class="text-2xl font-bold" type="text" v-model="todo.title" />
+        </div>
+        <textarea class="flex-1" v-model="todo.description" />
         <label>
           <input type="checkbox" v-model="todo.completed" />
           Completed
