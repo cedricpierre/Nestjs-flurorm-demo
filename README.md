@@ -2,7 +2,7 @@
 
 This is a monorepo workspace managed by pnpm. 
 
-The goal is to demo how you can use Fluorm with NestJS and reause entities from NestJS
+The goal is to demo how you can use [Fluentity](https://github.com/cedricpierre/fluentity-core) with NestJS and reuse entities from NestJS
 
 ## Prerequisites
 
