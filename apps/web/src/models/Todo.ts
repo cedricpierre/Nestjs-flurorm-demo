@@ -1,4 +1,4 @@
-import { HasMany, Model, type Relation } from "fluorm";
+import { HasMany, Model, type Relation } from "@fluentity/core";
 import { Todo as TodoEntity } from '@api/todos/entities/todo.entity';
 import { Comment } from "./Comment";
 

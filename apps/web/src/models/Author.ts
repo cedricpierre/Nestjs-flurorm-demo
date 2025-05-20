@@ -1,4 +1,4 @@
-import { BelongsTo, Cast, Model, type Relation } from "fluorm";
+import { BelongsTo, Cast, Model, type Relation } from "@fluentity/core";
 import { Author as AuthorEntity } from '@api/todos/comments/entities/comment.entity';
 import { Comment } from "./Comment";
 
