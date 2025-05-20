@@ -2,7 +2,6 @@
 import { ref, onMounted, toRaw } from 'vue'
 import { Todo } from '../models/Todo'
 import { CreateTodoDto } from '@api/todos/dto/create-todo.dto'
-import type { Model } from 'fluorm';
 const todos = ref([])
 
 onMounted(async () => {
@@ -20,11 +19,12 @@ const deleteTodo = async (todo: Todo) => {
 }
 
 const createTodo = async () => {
-  const newTodo = await new Todo({
-    title: 'New Todo',
-    description: 'New Description',
-    completed: false
-  }).save()
+  const newTodo = new CreateTodoDto()
+  newTodo.title = 'Todo'
+  newTodo.description = 'New Description'
+  newTodo.completed = false
+
+  await Todo.create(newTodo)
 
   todos.value.push(newTodo)
 }
