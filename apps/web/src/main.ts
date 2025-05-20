@@ -4,9 +4,9 @@ import App from './App.vue'
 import router from './router/index'   
 import './main.css'
 
-import { FluORM } from 'fluorm'
+import { Fluentity } from '@fluentity/core'
 
-FluORM.configure({
+    Fluentity.configure({
     baseUrl: 'http://localhost:3000',
 })
 

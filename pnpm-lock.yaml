@@ -108,12 +108,12 @@ importers:
 
   apps/web:
     dependencies:
+      '@fluentity/core':
+        specifier: ^0.10.2
+        version: 0.10.2
       '@tailwindcss/vite':
         specifier: ^4.1.7
         version: 4.1.7(vite@6.3.5(@types/node@18.19.101)(jiti@2.4.2)(lightningcss@1.30.1)(terser@5.39.2))
-      fluorm:
-        specifier: ^0.7.0
-        version: 0.7.0
       pinia:
         specifier: ^2.3.1
         version: 2.3.1(typescript@5.1.6)(vue@3.5.14(typescript@5.1.6))
@@ -539,6 +539,9 @@ packages:
   '@eslint/js@8.57.1':
     resolution: {integrity: sha512-d9zaMRSTIKDLhctzH12MtXvJKSSUhaHcjV+2Z+GK+EEY7XKpP5yR4x+N3TAcHTcu963nIr+TMcCb4DBCYX1z6Q==}
     engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
+
+  '@fluentity/core@0.10.2':
+    resolution: {integrity: sha512-LWSg/CLL2zT66IY8nJonzX7UlMACjA+F4npTc1WAmxgN0XOMSmN8U9NWKaBt2obqHbCE5k9U7Hy1IpPH2qmURQ==}
 
   '@humanwhocodes/config-array@0.13.0':
     resolution: {integrity: sha512-DZLEEqFWQFiyK6h5YIeynKx7JlvCYWL0cImfSRXZ9l4Sg2efkFGTuFf6vzXjK1cq6IYkU+Eg/JizXw+TD2vRNw==}
@@ -2296,9 +2299,6 @@ packages:
 
   flatted@3.3.3:
     resolution: {integrity: sha512-GX+ysw4PBCz0PzosHDepZGANEuFCMLrnRTiEy9McGjmkCQYwRq4A/X786G/fjM/+OjsWSU1ZrY5qyARZmO/uwg==}
-
-  fluorm@0.7.0:
-    resolution: {integrity: sha512-Hb/8SloSpgo1Am8ovJ8qena5J35cHs5ntjqjIKiFpZb7Bpc4z46yZglGryIxUgBUaIu1zDe1M6v2EI3lmOgsDA==}
 
   for-each@0.3.5:
     resolution: {integrity: sha512-dKx12eRCVIzqCxFGplyFKJMPvLEWgmNtUrpTiJIR5u97zEhRG8ySrtboPHZXx7daLxQVrl643cTzbab2tkQjxg==}
@@ -4738,6 +4738,8 @@ snapshots:
 
   '@eslint/js@8.57.1': {}
 
+  '@fluentity/core@0.10.2': {}
+
   '@humanwhocodes/config-array@0.13.0':
     dependencies:
       '@humanwhocodes/object-schema': 2.0.3
@@ -6928,8 +6930,6 @@ snapshots:
       rimraf: 3.0.2
 
   flatted@3.3.3: {}
-
-  fluorm@0.7.0: {}
 
   for-each@0.3.5:
     dependencies:

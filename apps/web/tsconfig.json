@@ -15,6 +15,6 @@
       "@/*": ["./src/*"],
       "@api/*": ["../../apps/api/src/*"]
     },
-    "types": ["node"]
+    "types": ["node"],
   }
 } 
