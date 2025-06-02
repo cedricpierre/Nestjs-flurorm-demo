@@ -1,4 +1,4 @@
-# NestJS Flurorm Demo
+# NestJS Fluentity Demo
 
 This is a monorepo workspace managed by pnpm. 
 
